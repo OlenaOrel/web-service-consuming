@@ -2,23 +2,15 @@ package com.epam.webserviceconsuming;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@ComponentScan("com.epam.webserviceconsuming.client")
+@ComponentScan("com.epam.webserviceconsuming.config")
 public class WebServiceConsumingApplication {
 
 
-	public static void main(String[] args) {
-		SpringApplication.run(WebServiceConsumingApplication.class, args);
-	}
-
-	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-		return builder.build();
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(WebServiceConsumingApplication.class, args);
+    }
 
 }
